@@ -1,0 +1,17 @@
+<form ng-submit="submitDriverForm()">
+  <input type="text" id="id" ng-model="driverForm.id"> Id <br/>
+  <input type="text" id="fullName" ng-model="driverForm.fullName"> Full name <br/>
+  <input type="text" id="birthDate" ng-model="driverForm.birthDate"> Birth Date <br/>
+  <input type="text" id="experience" ng-model="driverForm.experience"> Experience <br/>
+  <input type="text" id="autobiography" ng-model="driverForm.autobiography"> Autobiography <br/>
+  <input type="text" id="salary" ng-model="driverForm.salary"> Salary <br/>
+  
+  
+  <select ng-model="driverForm.car.number">
+      <option value="">None</option>
+      <option ng-repeat="car in cars" value="{{ car.number }}">{{ car.number }}</option>
+  </select> Car Number <br/>
+  
+  <input type="submit" value="Submit Form">
+  <a href="#/driver">Cancel</a>
+</form>

@@ -1,0 +1,27 @@
+<table>
+  <tr>
+    <th>number</th>
+    <th>brand</th>
+    <th>status</th>
+    <th>location</th>
+    <th>averageSpeed</th>
+    <th>carryingCapacity</th>
+    <th>fuelConsumption</th>
+    <th>actions</th>
+  </tr>
+  <tr ng-repeat="car in cars">
+    <td>{{ car.number }}</td>
+    <td>{{ car.brand }}</td>
+    <td>{{ car.status }}</td>
+    <td>{{ car.location }}</td>
+    <td>{{ car.averageSpeed }}</td>
+    <td>{{ car.carryingCapacity }}</td>
+    <td>{{ car.fuelConsumption }}</td>
+    <td>
+      <a href="#car/{{ car.number }}/edit">Edit</a>
+      <a href="" ng-click="deleteCar(car.number)">Delete</a>
+    </td>
+  </tr>
+</table>
+
+<a href="#/car/new">Add Car</a>

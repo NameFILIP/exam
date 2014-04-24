@@ -1,0 +1,27 @@
+<table>
+  <tr>
+    <th>id</th>
+    <th>fullName</th>
+    <th>birthDate</th>
+    <th>experience</th>
+    <th>autobiography</th>
+    <th>salary</th>
+    <th>car</th>
+    <th>actions</th>
+  </tr>
+  <tr ng-repeat="driver in drivers">
+    <td>{{ driver.id }}</td>
+    <td>{{ driver.fullName }}</td>
+    <td>{{ driver.birthDate }}</td>
+    <td>{{ driver.experience }}</td>
+    <td>{{ driver.autobiography }}</td>
+    <td>{{ driver.salary }}</td>
+    <td>{{ driver.car.number }}</td>
+    <td>
+      <a href="#driver/{{ driver.id }}/edit">Edit</a>
+      <a href="" ng-click="deleteDriver(driver.id)">Delete</a>
+    </td>
+  </tr>
+</table>
+
+<a href="#/driver/new">Add Driver</a>

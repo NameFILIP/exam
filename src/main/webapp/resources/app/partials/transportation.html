@@ -1,0 +1,33 @@
+<table>
+  <tr>
+    <th>id</th>
+    <th>origin</th>
+    <th>startDate</th>
+    <th>destination</th>
+    <th>arrivalDate</th>
+    <th>distance</th>
+    <th>totalTime</th>
+    <th>cargoWeight</th>
+    <th>fuelUsed</th>
+    <th>car</th>
+    <th>actions</th>
+  </tr>
+  <tr ng-repeat="transportation in transportations">
+    <td>{{ transportation.id }}</td>
+    <td>{{ transportation.origin }}</td>
+    <td>{{ transportation.startDate }}</td>
+    <td>{{ transportation.destination }}</td>
+    <td>{{ transportation.arrivalDate }}</td>
+    <td>{{ transportation.distance }}</td>
+    <td>{{ transportation.totalTime }}</td>
+    <td>{{ transportation.cargoWeight }}</td>
+    <td>{{ transportation.fuelUsed }}</td>
+    <td>{{ transportation.car.number }}</td>
+    <td>
+      <a href="#transportation/{{ transportation.id }}/edit">Edit</a>
+      <a href="" ng-click="deleteTransportation(transportation.id)">Delete</a>
+    </td>
+  </tr>
+</table>
+
+<a href="#/transportation/new">Add Transportation</a>

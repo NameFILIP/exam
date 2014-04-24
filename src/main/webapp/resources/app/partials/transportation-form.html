@@ -1,0 +1,20 @@
+<form ng-submit="submitTransportationForm()">
+  <input type="text" id="id" ng-model="transportationForm.id"> Id <br/>
+  <input type="text" id="origin" ng-model="transportationForm.origin"> Origin <br/>
+  <input type="text" id="startDate" ng-model="transportationForm.startDate"> Start Date <br/>
+  <input type="text" id="destination" ng-model="transportationForm.destination"> Destination <br/>
+  <input type="text" id="arrivalDate" ng-model="transportationForm.arrivalDate"> Arrival Date <br/>
+  <input type="text" id="distance" ng-model="transportationForm.distance"> Distance <br/>
+  <input type="text" id="totalTime" ng-model="transportationForm.totalTime"> Total Time <br/>
+  <input type="text" id="cargoWeight" ng-model="transportationForm.cargoWeight"> Cargo Weight <br/>
+  <input type="text" id="fuelUsed" ng-model="transportationForm.fuelUsed"> Fuel Used <br/>
+  
+  
+  <select ng-model="transportationForm.car.number">
+      <option value="">None</option>
+      <option ng-repeat="car in cars" value="{{ car.number }}">{{ car.number }}</option>
+  </select> Car Number <br/>
+  
+  <input type="submit" value="Submit Form">
+  <a href="#/transportation">Cancel</a>
+</form>
