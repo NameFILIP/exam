@@ -26,7 +26,7 @@
 	</bean>
 	
 
-	<mvc:resources location="resources/" mapping="/resources/**" />
+	<mvc:resources location="app/" mapping="/app/**" />
 
 	<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver"
 			p:prefix="/WEB-INF/pages/"
